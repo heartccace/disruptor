@@ -22,5 +22,13 @@ EventProcessor:主要事件循环，处理Disruptor中的Event，并拥有消费
 
 他有一个实现类BatchEventProcessor，包含了event loop有效的实现，并且将回调到一个EventHandler接口的实现对象
 
+### Disruptor核心-EventHandler
+
+EventHandler：由用户实现并且代表了Disruptor中的一个消费者接口，也就是消费者逻辑的具体实现
+
+### Disruptor核心-WorkerProcessor
+
+WorkerProcessor: 确保每个sequence只被一个processor消费，同一个workerpool中处理多个workerprocessor不会消费同样的sequence
+
 
 
