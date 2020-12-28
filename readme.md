@@ -32,3 +32,30 @@ WorkerProcessor: 确保每个sequence只被一个processor消费，同一个work
 
 
 
+### Disruptor串并行操作
+
+使用Disruptor对象的handleEventsWith(final EventHandler<? super T>... handlers) 跟多个eventhandler实现并行操作。
+
+使用Disruptor对象的handleEventsWith(final EventHandler<? super T>... handlers). handleEventsWith(final EventHandler<? super T>... handlers)实现串行操作
+
+
+
+使用Disruptor对象的handleEventsWith(final EventHandler<? super T>... handlers). handleEventsWith(final EventHandler<? super T>... handlers)实现多边形操作
+
+
+
+
+
+
+
+### 并发编程线程池线程数设置
+
+1、通过Executors工厂类创建
+
+2、ThreadPoolExecutor自定义线程池
+
+3、计算机密集型与I/O密集型
+
+- 计算机密集型 （CPU密集型）：核心线程数/最大线程数（CPU核数 + 1  /CPU核数 * 2）
+- I/O密集型（读写密集型）：CPU核数/(1-0.9)
+
